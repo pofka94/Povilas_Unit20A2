@@ -1,0 +1,43 @@
+/* *{border: black dotted 1px;} */
+
+body{   /* Edits the margin to make it look smoother, added a background and a few fonts to make it look nicer */
+    margin: 0;
+    background: #c8efff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{ /* Adds a background colour for the header, centers the text and makes it white, while also adding some padding */
+    padding: 10px;
+    background: #18628a;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+
+section{
+    margin: auto;
+    padding: 20px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: 250px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 6px;
+    top: 105%;
+    left: -60%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
