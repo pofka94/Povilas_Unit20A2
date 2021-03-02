@@ -14,30 +14,79 @@ header{ /* Adds a background colour for the header, centers the text and makes i
     padding: 15px;
 }
 
-section{
-    margin: auto;
+section{    /* adds a padding to the webpage */
     padding: 20px;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px solid black;
+.box1{      /* Creates a box for the buttons and the #gameCanvas, and wraps them to make it look neater */
+    display: flex;
+    height: 500px;
+    flex-wrap: wrap;
+    width: 700px;
 }
 
-.tooltip .tooltiptext {
-    visibility: hidden;
-    position: absolute;
-    width: 250px;
+.box2{      /* Creates a box with a button */
+    width: 600px;
+    border: #555 solid 1px;
+    display: flex;
+    margin-top: 10px;
+}
+
+#gameCanvas{    /* Sets the background colour for the canvas*/
     background-color: #555;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 6px;
-    top: 105%;
-    left: -60%;
 }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
+.buttons{       /*Separates the buttons from the canvas*/
+    margin: 10px;
+}
+
+.button {       /* Changes how the buttons look */
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.button:hover{  /* Changes styling whenever I hope over the buttons */
+    background-color: #444;
+    color: white;
+}
+
+.button:active{ /* Changes background colour when the button is pressed. */
+    background-color: #222;
+}
+
+table, th, td{  /* Adds a border to the table */
+    border: 1px solid black;
+    border-collapse: collapse;  
+}
+
+th, td {        /* Adds padding and aligns text of the table */
+    padding: 10px;
+    text-align: left;
+}
+
+.tooltip {      /* Edits the text to have a dotted underline  */
+    display:inline-block;
+    position:relative;
+    border-bottom:2px dotted blue;
+}
+
+.tooltip span { /* The content inside the tooltips(span) will have alignments and styling */
+    left:50%;
+    transform:translate(-50%, 0);
+    padding:20px;
+    background-color:#EEEEEE;
+    position:absolute;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    display:none;
+}
+
+.tooltip:hover span {   /* When the tooltip has the mouse hovering over it will display the content inside "span" */
+    display:block;
 }

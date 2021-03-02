@@ -11,100 +11,496 @@
         <h1>Unit 20 Assignment 2</h1>
         <h2>By: Povilas Ambrasas</h2>
     </header>
+
     <section>
         <h2>What is Javascript and what are its uses?</h2>
         <p>Javascript, also abbreviated as JS, is one of the core programming languages that is used in web development.<br>
-        As it can achieve many things, whether it is 2D/3D animation, video players, interactive maps, etc.<br><br>
+        As it can achieve many things, such as 2D/3D animation, video players, interactive maps, etc.<br><br>
 
         According to <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript">Mozilla</a>, 
         JavaScript runs on client web browsers, which can be used to design or program how the web pages behave on the occurence of an event.<br>
-        JavaScript is also described as an "easy to learn" and "powerful scripting language", that is being used very often for controlling web page behavior.
-        <br><br>
-        JavaScript is also 
-        <br><br>
+        JavaScript is also described as an easy to learn and powerful scripting language, that is because it's syntax is similar to C++ and Java, 
+        as it reduces the number of new concepts required to learn.<br><br></p>
 
-        According to Mozilla, JavaScript is a 
-        <!-- <a class="tooltip">
-            prototype-based
-            <span class="tooltiptext"> allows the creation of an object without first defining its class </span>
-        </a>, 
-        <a class="tooltip">
-            multi-paradigm
-            <span class="tooltiptext"> Supporting more than one programming paradigm </span>
-        </a>, 
-        <a class="tooltip">
-            single-threaded
-            <span class="tooltiptext">Executes instructions in a single sequence </span>
-        </a>, 
-        <a class="tooltip">
-            dynamic language
-            <span class="tooltiptext">  </span>
-        </a>, 
-        <a class="tooltip">
-            supporting object-riented
-            <span class="tooltiptext">  </span>
-        </a>, 
-        <a class="tooltip">
-            imperative
-            <span class="tooltiptext">  </span>
-        </a> and 
-        <a class="tooltip">
-            declarative styles
-            <span class="tooltiptext">  </span>
-        </a>.<br><br> -->
 
-        <br><br>
-    
-        </p>
+        <h3>What are the major uses of JavaScript?</h3>
+        <p>There are many, but these are just a few:</p>
+        <ul>
+            <li>Creating web and mobile apps</li>
+            <li>Building web servers and developing server applications</li>
+            <li>Game development</li>
+            <li>Adding interactivity</li>
+        </ul>
 
-        <h3>Variables:</h3>
-        <p>A JavaScript variable hold data values with a name assigned to them to be used later on.</p>
-        <pre><code class="language-js">
-            var x = 14;
-            var y = 7;
-            alert(x + y); // Adds x and y together which shows number 21
+        <h4>Creating web and mobile apps</h4>
+        <p>Web and/or mobile app developers can use JavaScript frameworks for developing and making web and mobile apps.<br>
+            JavaScript frameworks are a collection of JavaScript code libraries that provide developers with pre-written code to use for routine programming features and tasks.<br><br>
+
+            An example of popular JavaScript frameworks would be <b>React</b>, <b>React Native</b>, <b>Angular</b> and <b>Vue</b>.</p>
+        
+        <h4>Building web servers and developing server applications</h4>
+        <p>Allows the creation of simple web servers and develop the back-end infrastructure using Node.js.</p>
+
+        <h4>Game development</h4>
+        <p>Developers can create games using pure JavaScript that can work on browsers.</p>
+
+        <h4>Webpage interaction</h4>
+        <p>Allows to make all kinds of things, whether it is an animation, a game, using drop-down menus, etc.</p>
+
+        <h3>What are the limitations of JavaScript?</h3>
+        <ul>
+            <li><b>Client-side Security</b> - Javascript is executed on the client-side, and because of that, JavaScript does not allow the reading or writing of files.</li>
+            <li><b>No multiprocessor/multi threading capabilities</b> - JavaScript would run a lot quicker if it had these capabilities but as of right now, 
+                JavaScript uses only a single-thread of a CPU. </li>
+            <li><b>No support for network applications.</b></li>
+            <li><b>Cannot access databases and would need to rely on a server side language.</b></li>
+            <li><b>Browser support</b> - Some browsers can give different results when interacting with JavaScript.</li>
+            <li><b>Not search engine friendly.</b></li>
+        </ul>
+        <p><a target="_blank" href="https://www.namasteui.com/limitations-of-javascript/">Source link.</a></p>
+    </section>
+
+    <section>
+        <h3>How to add JavaScript to HTML:</h3>
+        <p>There are 3 ways of adding JavaScript to webpages:</p>
+        <ol>
+            <li>Embedding code</li>
+            <li>Inline code</li>
+            <li>External file</li>
+        </ol>
+
+        <h4>Embedding code:</h4>
+        <p>There are 2 ways of embedding JavaScript to HTML pages, and both use the "&lt;script>...&lt;/script>" tag.<br>
+            Javascript can either be defined in the "<b>&lt;head></b>" tag or in the "<b>&lt;body></b>" tag.<br><br>
+
+        <b>Example1:</b></p>
+        <pre><code class="language-html">   <!-- Adds a styled code block -->
+            &lt;!DOCTYPE html>
+            &lt;html>
+                &lt;head>
+                    &lt;title>Embedding example 1&lt;/title>
+                    &lt;script>
+                    function embedEx1(){ 
+                        alert("Exmaple 1") 
+                    };
+                    &lt;/script>
+                &lt;/head>
+                &lt;body>
+                    &lt;p>I will show you the world!&lt;/p>
+                &lt;/body>
+            &lt;/html>
         </code></pre>
-        <button onclick="add()">Click me!</button>
+        <button class="example1 button" onclick="embedEx1()">Click me!</button><br><br>
 
+        <p><b>Example2:</b></p>
+        <pre><code class="language-html">   <!-- Adds a styled code block -->
+            &lt;!DOCTYPE html>
+            &lt;html>
+                &lt;head>
+                    &lt;title>Embedding example 2&lt;/title>
+                &lt;/head>
+                &lt;body>
+                    &lt;script>
+                    function embedEx2(){ 
+                        alert("Example 2") 
+                    };
+                    &lt;/script>
+                    &lt;p>I will show you the world!&lt;/p>
+                &lt;/body>
+            &lt;/html>
+        </code></pre>
+        <button class="example2 button" onclick="embedEx2()">Click me!</button><br><br>
+
+
+        <h4>Inline code:</h4>
+        <p>Usually, this method is used with HTML event attributes, such as <b>onmouseover</b>, <b>onclick</b>, <b>onerror</b> and many more.<br>
+        For most of my buttons I used the <b>onclick</b> event, as it lets me to call out a function.<br><br>
+    
+        <b>Inline example:</b></p>
+        <pre><code class="language-html">   <!-- Adds a styled code block -->
+            &lt;!DOCTYPE html >  
+            &lt;html>  
+                &lt;head>  
+                    &lt;title>Inline example&lt;/title>  
+                &lt;/head>  
+                &lt;body>  
+                // Should pop up an alert window saying "Thank you for clicking on me!"
+                    &lt;button onclick="alert('Thank you for clicking on me!')">Click me!&lt;/button> 
+                    &lt;p>Hello there!&lt;/p>
+                &lt;/body>  
+            &lt;/html>
+        </code></pre>
+        <button class="inlineEx button" onclick="alert('Thank you for clicking on me!')">Click me!</button>
+
+
+        <h4>External file:</h4>
+        <p>A separate file can be made to hold all of the JavaScript code.<br> 
+            This makes the raw HTML look cleaner while also allowing other webpages to reuse the JavaScript code.<br><br>
+
+            Usually, the external(.js) files are put at the bottom of the website, that is because when you place your JavaScript links at the bottom of your HTML body,<br>
+            it gives the HTML time to load before any of the JavaScript loads, which can prevent errors, and speed up website response time.<br><br>
+
+            <b>External file example:</b></p>
+        <pre><code class="language-html">   <!-- Adds a styled code block -->
+            &lt;!DOCTYPE html >  
+            &lt;html>  
+                &lt;head>  
+                    &lt;title>External file example&lt;/title>  
+                &lt;/head>  
+                &lt;body>
+                    &lt;p>Why did the duck cross the road?&lt;br>
+                    I don't know...&lt;/p>
+                    &lt;script src="scripts/js.js">&lt;/script> // defines the path to the location of the .js file and grabs it.
+                &lt;/body>  
+            &lt;/html>
+        </code></pre>
+
+    </section>
+
+    <section>
+        <h3>Variables:</h3>
+        <p>A JavaScript variable hold data values with a name assigned to them to be used later on.<br>
+        A variable in JavaScript does not need any data to exist, is just needs to be defined.<br><br>
+
+        There are 3 keywords that can define a variable:</p>
+        <ol>
+            <li>var</li>
+            <li>let</li>
+            <li>const</li>
+        </ol>
+        <p>According to <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">mozilla</a>,
+        "let" allows you to declare variables that are limited to the scope of a block statement, or expression on which it is used.<br>
+        While the "var" keyword, declares a variable grobally, or locally to an entire function.<br><br>
+        In simple term, what it means is that if the variable that uses "var" keyword inside of a function, then it can still be accessed inside a different block,<br>
+        while "let" would only work inside the current block(such as a function).<br><br>
+
+        <b>Here is an example or var and let:</b></p>
+        <pre><code class="language-js">   <!-- Adds a styled code block -->
+            const text = "The result is: "  // A string variable that cannot be reassigned.
+            let summary;    // A real variable with the data set as undefined
+            var x = 14;     // an assigned variable with the value of 14.
+            var y = 7;
+        
+            // assigns the variable "summary" the data of "text" and the result of x + y. Then shows what the variable "summary" is.
+            // Should show "The result is: 21"
+            summary = text + (x + y)
+            alert(summary);
+        </code></pre>
+        <button class="add button" onclick="add()">Click me!</button>
+
+
+        <p>The keyword "<b>const</b>" are block-scoped in the same way as "<b>let</b>" except "<b>const</b>" cannot be reassigned or redeclared.<br><br>
+        
+        <b>An example of const:</b></p>
+        <pre><code class="language-js">   <!-- Adds a styled code block -->
+            const x = 40;   // sets a constant variable with a value of 40
+
+            function constEx(){
+                try { x = 21;   // tries to set the value of x to 21
+                } catch (something) { alert(something) }    // catches the result and then shows it
+                // should show an error message
+            
+                alert("The number is: " + x)    // after the error message it should show the text "The number is: 40"
+            }
+        </code></pre>
+        <button class="constEx button" onclick="constEx()">Click me!</button>
+
+        
         <h3>Loops:</h3>
         <p>Loops allows to repeat the same function or line of code multiple times without the need of repeating it yourself.<br>
-        This <br>
-        For example:</p>
+        In this example I will be using a "<b>for</b>" loop.<br><br>
 
+        The way a "<b>for</b>" loop works is by defining a variable, then using it to set a condition, then increments it once it finishes one loop
+        and breaks until the condition is no longer true.<br><br>
 
-        <pre><code class="language-js">
+        <b>For example:</b></p>
+        <pre><code class="language-js">   <!-- Adds a styled code block -->
             for (let i = 0; i &lt; 3; i++) { // shows 0, then 1, then 2, then breaks
                 alert(i);
             }
         </code></pre>
-        <p>This is known as a "for" loop and it requires an integer, a condition and incrementation.<br>
-        Everytime the line of code gets executed and finished, it will increment the given integer and use it to decide whether the code should be run or not.</p>
-        <button onclick="exLoop()">Click me!</button>
+        <button class="exLoop button" onclick="exLoop()">Click me!</button>
 
 
         <h3>Decision Making</h3>
-        <p></p>
+        <p>Decision making allows the code to have more than 1 possible returns.<br><br>
+
+        For this example, I will use an "<b>if</b>" statement.<br>
+        An "<b>if</b>" statement uses some kind of a parameter with a condition to decide what it wants to do.<br>
+        It can also put in other conditions, if the first one does not come true.<br><br>
+    
+        <b>Example:</b></p>
+            <pre><code class="language-js">   <!-- Adds a styled code block -->
+            var x = 10;
+
+            if(x >= 18){    // if the number x is more or equal to 18 then run this path, if not then skip.
+                return alert("Accepted!")
+            } else if (x >= 15) {   // if the number x is more or equal to 15 then run this path, if not then skip.
+                return alert("So close, but not there!")
+            } else {    // if nothing returns true, then do this.
+                return alert("Too young!")
+            }
+            </code></pre>
+            <button class="dMake button" onclick="dMake()">Click me!</button>
+
 
         <h3>Functions</h3>
-        <p></p>
+        <p>According to <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions">mozilla</a>, a function is a set of stements that
+        performs a task or calculates a value,<br>
+        but for a procedure to qualify as a function, it should take some input and return an output.<br><br>
+        
+        <b>Example:</b></p>
+        <pre><code class="language-js">   <!-- Adds a styled code block -->
+            // a function to call out another function
+            function functionEx(){
+                example(9, 10)
+            }
+            
+            function example(a, b){
+                return alert(a + b) // Should return a number 19
+            }
+        </code></pre>
+        <button class="functionEx button" onclick="functionEx()">Click me!</button>
+    </section>
 
-        <h4>Sources:</h4>
-        <ul>
-            <li><a target="_blank" href="https://en.wikipedia.org/wiki/JavaScript">Wikipedia</a></li>
-            <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs</a></li>
-        </ul>
+    <section>
+        <h3>A JavaScript animation and some interactivity:</h3>
+        <p>The buttons made here uses an event called "<b>onclick</b>", which allows to run a specified line of code upon triggering.<br>
+        In this instance, I used 3 buttons with 3 different specified functions assigned to them to allow interaction with the animation.</p>
+
+        <div class="flexContainer">
+            <div class="box1">
+                <div class="buttons">
+                    <button class="hide button" onclick="hide()">Hide/unhide</button>
+                    <button class="increment button" onclick="increment()">Add ball</button>
+                    <button class="decrement button" onclick="decrement()">Remove ball</button>
+                </div>
+
+                <div>
+                    <canvas id="gameCanvas"></canvas>
+                </div>
+                <p>Some of the source code came from <a target="_blank" href="https://youtu.be/hoWjnidQOms">here</a>.</p>
+            </div>
+
+            <div class="box2">
+                <p>This button will interact with the container's background by using an <b>onclick</b> event handler to call the JavaScript function</p>
+                <button class="backChange button" onclick="backChange()">Change background colour</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Testing:</h2>
+        <p><b>Note:</b> Hover on the objects that have the blue <a style="border-bottom:2px dotted blue;">underline</a> to show an image.</p>
+        <table style="width: 60%;">
+            <tr>
+                <th>Index</th>
+                <th>File/Class/ID</th>
+                <th>Actions</th>
+                <th>Expected Outcome</th>
+                <th>Actual Outcome</th>
+                <th>Browser(s) used</th>
+                <th>Pass/Fail</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>index.html</td>
+                <td>Double click the index.html file in file explorer</td>
+                <td>Should open a browser that should look like <div class="tooltip">"screenshot1.jpg"<span><img alt="Screenshot image 1" src="Images/screenshot1.jpg"></span></div></td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>.example1</td>
+                <td>Click</td>
+                <td>Pops up an Alert box with content "Example 1"</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>.example2</td>
+                <td>Click</td>
+                <td>Pops up an Alert box with content "Example 2"</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>.inlineEx</td>
+                <td>Click</td>
+                <td>Pops up an Alert box with content "Thank you for clicking on me!"</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>.add</td>
+                <td>Click</td>
+                <td>Pops up an Alert box with content "The result is: 21"</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>06</td>
+                <td>.constEx</td>
+                <td>Click</td>
+                <td>Pops up an Alert box with content as a TypeError message and then pops up another Alert box with content "The number is: 40"</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td>.exLoop</td>
+                <td>Click</td>
+                <td>Pops up 3 consecutive Alert boxes with content "0", "1", "2"</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>08</td>
+                <td>.dMake</td>
+                <td>Click</td>
+                <td>Pops up an alert box with content "Too young!"</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>09</td>
+                <td>.functionEx</td>
+                <td>Click</td>
+                <td>Pops up an alert box with content "19"</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>#gameCanvas</td>
+                <td>None needed</td>
+                <td>Should render an animation that looks like <div class="tooltip">"screenshot2.jpg"<span><img alt="screenshot image 2" src="Images/screenshot2.jpg"></span></div></td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>.hide</td>
+                <td>Click once. Wait for 2 seconds and click again</td>
+                <td>Click 1 - hides the #gameCanvas. Click 2 - reveals the #gameCanvas</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>.increment</td>
+                <td>click</td>
+                <td>Adds a ball to the #gameCanvas animation</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>.decrement</td>
+                <td>click</td>
+                <td>Removes a ball from the #gameCanvas animation</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>.backChange</td>
+                <td>Click, wait for 2 seconds and click again</td>
+                <td>Click 1 - Changes the .box2 background to white.<br> Click 2 - Changes the .box2 background to none</td>
+                <td>As expected</td>
+                <td>Chrome Version 88.0.4324.190 <br> & <br> Opera Version:74.0.3911.160</td>
+                <td>Pass</td>
+            </tr>
+          </table>
+        <h2>Evaluation of Assignment one</h2>
+        <p>The goal of this webpage was to show how the box model of CSS works and how to use it in day to day websites.</p>
+        <p>The website over all did not have any interactivity what so ever, and so makes the website feel empty and boring.<br>
+            So to make it better it would be nice to add something that the user can interact with. For example, adding a <br>
+            button that can change the size of either the Margin, Border or the padding.<br><br>
+        
+            Adding a CSS interactable button like that would make it clearer to the user on how these elements work as it would show which one is doing what.<br>
+            As an example, I will show a button that can change it's margin size on click.<br><br>
+
+            <b>Code example:</b>
+        </p>
+        <pre><code class="language-html">   <!-- Adds a styled code block -->
+            &lt;!DOCTYPE html>
+            &lt;html>
+                &lt;head>
+                    &lt;title>Interactable button example&lt;/title>
+                    &lt;style>
+                        .marginEx:active{
+                            margin: 30px;
+                        }
+                    &lt;/style>
+                &lt;/head>
+                &lt;body>
+                    &lt;button class="marginEx">Press me!&lt;/button>
+                &lt;/body>
+            &lt;/html>
+        </code></pre>
+        <p>
+            This code should change the margins size of the button to 30px every time it gets clicked.<br>
+            Something like this would be minor, but it would make it easier to show a visible difference on how margin works.<br><br>
+        </p>
+        <p>
+            I would also consider changing the IFrame element into a div nest, as IFrame can affect the loading speed of the webpage.<br>
+            The div nest would be editable using CSS, which would sort out alignment and styling, while also making the webpage run faster.<br><br>
+
+            <b>Code example:</b>
+        </p>
+        <pre><code class="language-html">
+            &lt;!DOCTYPE html>
+            &lt;html>
+                &lt;head>
+                    &lt;title>Div example&lt;/title>
+                &lt;/head>
+                &lt;body>
+                    &lt;div>
+                        &lt;div>Box 1&lt;/div>
+                        &lt;div>Box 2&lt;/div>
+                        &lt;div>Box 3&lt;/div>
+                    &lt;/div>
+                &lt;/body>
+            &lt;/html>
+        </code></pre>
 
     </section>
-    <script src="scripts/js.js"></script>
+    <section>
+        <h2>Validation reports:</h2>
+        <p>All of the validation that is done, was done only on my own files and not on the external, as I have not edited them.</p>
+        <h3>style.css</h3>
+        <img alt="style.css validation" src="Images/style.css validation.jpg">
+        <h3>ball.js</h3>
+        <img alt="ball.js validation" src="Images/ball.js validation.jpg">
+        <h3>code.js</h3>
+        <p>This one sais it has errors, but thats because I have called all of the functions inside the html and this webpage does not see it.</p>
+        <p>Also, Line 22 Col 9 error is intentional for the work and not accidental</p>
+        <img alt="code.js validation" src="Images/code.js validatiion.jpg">
+        <img alt="code.js validation 2" src="Images/code.js validatiion2.jpg">
+        <h3>index.html</h3>
+        <img alt="index.html validation" src="Images/index.html validation.jpg">
+    </section>
+    <script src="scripts/Ball.js"></script>
+    <script src="scripts/code.js"></script>
     <script src="scripts/prism.js"></script>
 </body>
 </html>
-
-<!-- 
-    CODE EXAMPLE
-<pre> <code class="language-css">
-    code:{
-        wow= something;
-    };
-</code> </pre>
--->
